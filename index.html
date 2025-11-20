@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button
+      class="menu-toggle"
+      onclick="document.querySelector('.tickets-panel').classList.toggle('show')"
+    >
+      ☰ Menu
+    </button>
+
+    <div class="container">
+      <!-- Left Panel -->
+      <div class="tickets-panel">
+        <div class="panel-header">
+          <div class="panel-title">Support</div>
+          <div class="search-box">
+            <input type="text" placeholder="Search tickets..." />
+          </div>
+        </div>
+
+        <div class="status-filters">
+          <button class="filter-btn active">All</button>
+          <button class="filter-btn">Open</button>
+          <button class="filter-btn">Pending</button>
+          <button class="filter-btn">Resolved</button>
+        </div>
+
+        <div class="tickets-list">
+          <div class="ticket-item active">
+            <div class="ticket-header">
+              <span class="ticket-id">#TKT-2401</span>
+              <span class="priority-badge priority-critical">Critical</span>
+            </div>
+            <div class="ticket-subject">Payment Processing Failed</div>
+            <div class="ticket-meta">
+              <div style="display: flex; align-items: center; gap: 4px">
+                <div class="ticket-avatar">JM</div>
+                <span>John M.</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 4px">
+                <div class="unread-dot"></div>
+                <span>2m</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ticket-item">
+            <div class="ticket-header">
+              <span class="ticket-id">#TKT-2400</span>
+              <span class="priority-badge priority-high">High</span>
+            </div>
+            <div class="ticket-subject">Cannot Login to Account</div>
+            <div class="ticket-meta">
+              <div style="display: flex; align-items: center; gap: 4px">
+                <div class="ticket-avatar">SJ</div>
+                <span>Sarah J.</span>
+              </div>
+              <span>15m</span>
+            </div>
+          </div>
+
+          <div class="ticket-item">
+            <div class="ticket-header">
+              <span class="ticket-id">#TKT-2399</span>
+              <span class="priority-badge priority-medium">Medium</span>
+            </div>
+            <div class="ticket-subject">Feature Request Dark Mode</div>
+            <div class="ticket-meta">
+              <div style="display: flex; align-items: center; gap: 4px">
+                <div class="ticket-avatar">MC</div>
+                <span>Mike C.</span>
+              </div>
+              <span>1h</span>
+            </div>
+          </div>
+
+          <div class="ticket-item">
+            <div class="ticket-header">
+              <span class="ticket-id">#TKT-2398</span>
+              <span class="priority-badge priority-high">High</span>
+            </div>
+            <div class="ticket-subject">Billing Invoice Issue</div>
+            <div class="ticket-meta">
+              <div style="display: flex; align-items: center; gap: 4px">
+                <div class="ticket-avatar">EM</div>
+                <span>Emma W.</span>
+              </div>
+              <span>3h</span>
+            </div>
+          </div>
+
+          <div class="ticket-item">
+            <div class="ticket-header">
+              <span class="ticket-id">#TKT-2397</span>
+              <span class="priority-badge priority-low">Low</span>
+            </div>
+            <div class="ticket-subject">Documentation Updates</div>
+            <div class="ticket-meta">
+              <div style="display: flex; align-items: center; gap: 4px">
+                <div class="ticket-avatar">DK</div>
+                <span>David K.</span>
+              </div>
+              <span>5h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Panel -->
+      <div class="conversation-panel">
+        <div class="chat-header">
+          <div class="chat-info">
+            <h2>#TKT-2401 Payment Processing</h2>
+            <p><span class="status-dot"></span>John Martinez • Active</p>
+          </div>
+          <div class="header-actions">
+            <button class="header-btn">⭐ Flag</button>
+            <button class="header-btn">🔗 Link</button>
+            <button class="header-btn">⋯ More</button>
+          </div>
+        </div>
+
+        <div class="messages-container">
+          <div class="message-group">
+            <div class="msg-avatar">JM</div>
+            <div class="msg-content">
+              <div class="msg-header">John Martinez</div>
+              <div class="msg-text">
+                Payment keeps failing with error ERR_402. Tried multiple payment
+                methods.
+              </div>
+              <div class="msg-time">2 min ago</div>
+            </div>
+          </div>
+
+          <div class="message-group own">
+            <div class="msg-content">
+              <div class="msg-header" style="text-align: right">
+                Support Team
+              </div>
+              <div class="msg-text">
+                I found the issue. The payment gateway had a temporary glitch.
+                Cleared your transaction history.
+              </div>
+              <div class="msg-time" style="text-align: right">Just now</div>
+            </div>
+          </div>
+
+          <div class="message-group own">
+            <div class="msg-content">
+              <div class="msg-header" style="text-align: right">
+                Support Team
+              </div>
+              <div class="msg-text">
+                Try processing the payment again. Should work now. Let me know
+                if any issues.
+              </div>
+              <div class="msg-time" style="text-align: right">Just now</div>
+            </div>
+          </div>
+
+          <div class="message-group">
+            <div class="msg-avatar">JM</div>
+            <div class="msg-content">
+              <div class="msg-header">John Martinez</div>
+              <div class="msg-text">
+                Perfect! It worked. Thanks for the quick help!
+              </div>
+              <div class="msg-time">Just now</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reply-box">
+          <textarea
+            class="reply-input"
+            placeholder="Type response..."
+          ></textarea>
+          <button class="send-btn">Send</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
